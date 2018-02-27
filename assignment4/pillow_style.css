@@ -1,6 +1,6 @@
 
 nav{
-	background-color: pink;
+	background-color: lightblue;
 }
 
 /*body {
@@ -135,7 +135,19 @@ ul {
 	display:inline-block;
 }
 
-#last{
-	height:50px;
+.product-view1 {
+	width:33%;
+	display:inline-block;
 }
+
+.product-view2{
+	width:33%;
+	display:inline-block;
+}
+.product-view3{
+	width:33%;
+	display:inline-block;
+}
+
+
 
