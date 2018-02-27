@@ -1,12 +1,9 @@
-
+/* top navigation bar styles*/
 nav{
 	background-color: lightblue;
 }
 
-/*body {
-	margin:0;
-}
-*/.left-nav{
+.left-nav{
 	list-style-type: none;
 	text-align: center;
 	padding: 10px;
@@ -33,6 +30,8 @@ ul {
 	height: 35px;
 }
 
+/* Home page styles*/
+/* main image styles by setting a background image for the text*/
 #main-image {
 	text-align: center;
 	font-size: 70px;
@@ -43,10 +42,10 @@ ul {
 	padding:300px;
 }
 
-
 .small-images{
 	text-align: center;
 }
+
 
 .small-images li{
 	background-image: url("https://secure.img2-fg.wfcdn.com/im/42801151/resize-h800%5Ecompr-r85/3949/39497624/Colmars+Throw+Pillow.jpg");
@@ -62,6 +61,7 @@ ul {
 	font-size: 25px;
 }
 
+/* product detail page styles*/
 .back-button{
 	display:block;
 	padding-bottom: 0;
@@ -115,6 +115,8 @@ ul {
   display: inline-block;
 }
 
+
+/* browse page styles*/
 .category-title{
 	font-size: 20px;
 }
