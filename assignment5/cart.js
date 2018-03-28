@@ -5,6 +5,7 @@ $(document).ready(function(){
     $("#sumPrice").text("$"+sumCartPrice());
     if(cart.length != 0){
         $("#cart").text("");
+        
     }
 
 // Add new product to the cart

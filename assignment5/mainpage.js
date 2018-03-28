@@ -1,3 +1,4 @@
+// Initialize a "warehouse" that has all of the items
 function initWarehouse(){
   var warehouse = localStorage.getItem('warehouse');
   if(warehouse == null){
@@ -20,6 +21,7 @@ function initWarehouse(){
   }
 }
 
+// Initialize the cart. Check if the cart is empty or not
 function initCart(){
   var items = localStorage.getItem('items');
   console.log(items);
@@ -40,20 +42,22 @@ function initCart(){
   }
 }
 
-function changeGreyAtt(){
-  document.getElementById("price").innerHTML = "$12.99";
-  document.getElementById("product-large-image").src = "https://images-na.ssl-images-amazon.com/images/I/91ZjA%2BX3vCL._SY355_.jpg";
-  document.getElementById("color").innerHTML = "Color: Grey";
-}
+// Functions to change attributes depending on the color selected. Ended up not using this code
+// function changeGreyAtt(){
+//   document.getElementById("price").innerHTML = "$12.99";
+//   document.getElementById("product-large-image").src = "https://images-na.ssl-images-amazon.com/images/I/91ZjA%2BX3vCL._SY355_.jpg";
+//   document.getElementById("color").innerHTML = "Color: Grey";
+// }
 
-function changeNavyAtt(){
-  document.getElementById("price").innerHTML = "$24.99"
-  document.getElementById("product-large-image").src = "https://images.crateandbarrel.com/is/image/Crate/BrennerPillowIndigo20InSHS16"
-  document.getElementById("color").innerHTML = "Color: Navy";
-}
+// function changeNavyAtt(){
+//   document.getElementById("price").innerHTML = "$24.99"
+//   document.getElementById("product-large-image").src = "https://images.crateandbarrel.com/is/image/Crate/BrennerPillowIndigo20InSHS16"
+//   document.getElementById("color").innerHTML = "Color: Navy";
+// }
 
 
 
+// Changing the attributes based on the color selected
 function pillowType(id) {
   var price = document.getElementById("price");
   var product_large_image = document.getElementById("product-large-image");
@@ -72,6 +76,7 @@ function pillowType(id) {
 
 }
 
+// Stores item attributes in local storage
 function addToCart(){
 
   var items = JSON.parse(localStorage.getItem('items'));
@@ -82,6 +87,7 @@ function addToCart(){
   var itemImage = document.getElementById("product-large-image").src;
   var itemQty = document.getElementById("quantity");
   itemQty = itemQty.options[itemQty.selectedIndex].value;
+  document.getElementById("number").innerHTML = itemQty
 
   if(items[itemId] == null){
     var newItem = {};
@@ -98,10 +104,12 @@ function addToCart(){
   localStorage.setItem('items', JSON.stringify(items));
 }
 
+// Empty cart. Clears the local storage. Mainly for debugging purposes to initialize everything again
 function emptyCart(){
   localStorage.removeItem("items");
 }
 
+// Remove an item in the shopping cart
 function removeItem(id){
   cart = JSON.parse(localStorage.getItem('items'));
   delete cart[id];
@@ -112,5 +120,6 @@ function removeItem(id){
 $(document).ready(function(){
   initWarehouse();
   cart_size = initCart();
+  document.getElementById("number").innerHTML = cart_size
 });
 
