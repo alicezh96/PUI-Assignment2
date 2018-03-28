@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Flip Stitch</title>
+    <meta charset="UTF-8">
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="pillow_style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="mainpage.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+  <!--Navigation Bar-->
+  <nav> 
+      <!-- using a list to display all of the components -->
+        <ul class="left-nav">
+          <a href="pillow_index.html"><li id = "logo">Logo</li></a>
+          <a href="product-browse.html"><li>Couch Pillow</li></a>
+          <li>Bed Pillow</li>
+          <li>Round Pillow</li>
+          <li>Floor Pouf Pillow</li>
+          <!-- <span><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/14173-200.png"></span>
+          <span><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/860682-200.png"></span> -->
+          <span id="number">0</span>
+          <span><a href = "shopping-cart.html"><img src="https://image.flaticon.com/icons/png/512/34/34627.png"></a></span>
+
+        </ul>
+      </nav>
+  <!---->
+
+    <div id="checkout">
+      <h1> Shopping Cart </h1>
+    </div>
+    <div>
+      <div id="orderSummary"> 
+       <h2> Order Summary </h2>  
+      </div>
+      <!-- from lab -->
+      <div id="container">
+          <div id="todo-lists">
+              <div class="list">
+                  <ul id="item-list">
+                      <!-- Button to clear local storage -->
+                      <li>Empty Cart<button class="delete-item" onclick=emptyCart()><a href="shopping-cart.html">X</a></button></li>
+                  </ul>
+
+              </div>
+            
+          </div>
+      </div class="checkout-button" >
+       <a href="#"><button>Checkout</button></a>
+    </div>
+
+           <div class ="clear"></div>
+       
+
+
+    </body>
+</html>
+
+<script>
+// load order summary
+$(document).ready(function(){
+
+  var list = $("#orderSummary");   
+  var items = localStorage.getItem('items'); 
+  // need to check if the items array is empty or if the object is empty
+  if(items == null || Object.keys(JSON.parse(items)).length == 0){
+    list.append("<h4>Your cart is empty. </h4>");
+  }else{
+    items = JSON.parse(items);
+    // initialize total to 0 if cart is empty
+    total = 0.0;
+
+    table = "<table border=1>\
+         <tr>\
+          <th></th>\
+          <th>Item</th>\
+          <th>Color</th>\
+          <th>Price</th>\
+          <th>Quantity</th>\
+          <th>Remove</th>\
+         </tr>";
+
+    for (var id in items){
+      total += parseFloat(items[id]["price"].substr(1)) * parseInt(items[id]["qty"]);
+      table += "<tr>\
+        <td><img src=\"" + items[id]["img"] + "\" height=\"100\" width=\"100\"></td>\
+        <td>" + items[id]["name"] + "</td>\
+        <td>" + items[id]["color"] + "</td>\
+        <td>" + items[id]["price"] + "</td>\
+        <td>" + items[id]["qty"] + "</td>\
+        <td><button class=\"delete-item\" onClick=removeItem(\""+ items[id]["id"] + "\")>\
+            <a href=\"shopping-cart.html\">X</a></button></td></tr>";
+    }
+    // don't want file to close </table> on its own
+    list.append(table + "</table>");
+    // calculate total
+    list.append("<hr><h4>Cart Total: $" + Math.round(total*100)/100 + "</h4>");
+  }
+});
+
+</script>
+
+

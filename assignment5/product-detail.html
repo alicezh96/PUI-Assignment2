@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flip Stitch</title>
+    <meta charset="UTF-8">
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="pillow_style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src= "mainpage.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<header>
+		<nav>
+		<!-- top navigation bar -->
+	    	<ul class="left-nav">
+		    	<a href="pillow_index.html"><li id = "logo">Logo</li></a>
+		    	<a href="product-browse.html"><li>Couch Pillow</li></a>
+		    	<li>Bed Pillow</li>
+		    	<li>Round Pillow</li>
+		    	<li>Floor Pouf Pillow</li>
+	    		<!-- <span><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/14173-200.png"></span>
+	    		<span><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/860682-200.png"></span> -->
+	    		<span id="number">0</span>
+	    		<span><a href = "shopping-cart.html"><img src="https://image.flaticon.com/icons/png/512/34/34627.png"></a></span>
+	    	</ul>
+    	</nav>
+	</header>
+	<!-- adding a back button below nav bar -->
+	<a class="back-button" href="pillow_index.html">Back</a>
+	<!-- product image and detail on the left 1/2 of screen -->
+
+	<div id="animal">
+        <h1 id="animal-properties"></h1>
+        <img id="animal-img" src="">
+    </div>
+
+
+	<div class="left-product-detail">
+		<img id="product-large-image" src="https://images.crateandbarrel.com/is/image/Crate/BrennerPillowIndigo20InSHS16">
+		<img class="product-small-image" src="https://images.crateandbarrel.com/is/image/Crate/BrennerPillowIndigo20InSHS16">
+		<img class="product-small-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfpdTE0AiDu8sYGpSX0-xca829TXXKVDGKcJolXw4Y80-RENmo">
+		<img class="product-small-image" src="https://images-na.ssl-images-amazon.com/images/I/A1-nQfrJngL._SL1500_.jpg">
+		<p><a href="full-detail">View Full Details</a></p>
+	</div>
+	<!-- product information like price and select featuers on the right 1/2 of screen -->
+	<div class="right-product-detail">
+		<h1>Velvet Decorative Couch Pillow</h1>
+		<p id="price">$24.99</p>
+		<!-- adding star rating as image -->
+		<p><img id="star-rating" src="https://d30y9cdsu7xlg0.cloudfront.net/png/766721-200.png"></p>
+		<p id="color">Color: Navy</p>
+		<div>
+			<button id="dot-navy" onclick=pillowType("dot-navy")></button>
+			<button id="dot-grey" onclick=pillowType("dot-grey")></button>
+		</div>
+		<p> Quantity: 
+			<!-- Set the max number of pillows users can buy. Default is 1 -->
+			<select id="quantity">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+            </select>
+		</p>
+		<!-- Add to cart button/link to new page -->
+		<button id="cart" onclick = addToCart()>
+		<a href="shopping-cart.html"> Add to Cart </a>
+		</button>
+		<!-- Checkout button/link to new page -->
+		<button> <a href="shopping-cart.html">Checkout</a> </button>
+	</div>
+</body>
+
+</html>
