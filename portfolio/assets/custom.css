@@ -1,0 +1,357 @@
+/* AOS */
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
+/* SECTIONS */
+#home {
+    display: block;
+}
+
+#about, #portfolio, #poster, #dm {
+    display: none;
+}
+
+
+/* GENERAL */
+body {
+    position: relative;
+    overflow: auto;
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+
+section {
+    margin-left: 200px;
+    min-height: 100%;
+    min-width: calc(100% - 200px);
+    display: block;
+}
+
+.container {
+    position: relative;
+    display: block;
+    top: 100px;
+    left: 0px;
+}
+
+.col-sm-3 {
+    margin-bottom: 25px
+}
+
+.homerow {
+    top: 0px;
+}
+
+/* TYPOGRAPHY */
+
+h3 {
+    color: CornflowerBlue;
+    font-weight: bolder;
+    margin-bottom: 20%;
+}
+
+h2 {
+    font-weight: bold;
+    color: CornflowerBlue;
+}
+
+.title {
+    position: relative;
+    text-align: left;
+    top: 50px;
+    left: 15px;
+    color: black;
+    width: 100%;
+    font-size: 30px;
+    display: block;
+}
+
+.title a {
+    font-size: 18px;
+}
+
+
+
+
+.icon {
+    font-size: 25px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.icon a {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAVIGATION MENU */
+
+/*
+.side {
+    min-height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: left;
+}
+*/
+.side {
+    width: 100%;
+    padding: 5px;
+    margin: 0px;
+}
+
+.menu {
+    top: 40%;
+    left: 30px;
+    width: 100%;
+}
+
+.side a {
+    line-height: 32px;
+    text-decoration: none;
+    font-size: 13px;
+
+    display: inline-block;
+    margin: 0px;
+    padding: 10px;
+
+}
+
+/* Images */
+
+.me {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.homeimg {
+    width: 100%;
+    margin-left: 0px;
+}
+
+/* Portfolio images - hover */
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: black;
+    overflow: hidden;
+    width: 20px
+    height: 100%;
+    transition: .5s ease;
+    opacity: 0;
+}
+
+.portfolio:hover .overlay {
+    opacity: .8;
+}
+
+.portfolio {
+    position: relative;
+}
+
+.portfolio img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    max-height: 250px;
+    opacity: 1;
+}
+
+.text {
+    white-space: nowrap;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    display; block;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.text:hover {
+    color: white;
+}
+
+/* Animations */
+
+.fadein {
+    animation: fadein 2s;
+}
+
+.fadeinslow {
+    animation: fadein 3s;
+}
+
+.fadeup {
+    animation: fadeup 2s;
+}
+
+.fadedown {
+    animation: fadedown 2s;
+}
+
+.fadeleft {
+    animation: fadeleft 2s;
+}
+
+.faderight {
+    animation: faderight 2s;
+}
+
+.type {
+    animation: type 3s;
+}
+
+.spin {
+    animation: spin 1s;
+}
+
+.backspin {
+    animation: backspin 1s;
+}
+
+.expand {
+    animation: expand 2s;
+}
+
+/* keyframes */
+
+@keyframes fall {
+    0% {
+        top: -10px;
+        opacity: 0;
+    }
+
+    30% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    100% {
+        top: 15px;
+        opacity: 0;
+    }
+}
+
+@keyframes rise {
+    0% {
+        top: -10px;
+        opacity: 0;
+    }
+
+    30% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    100% {
+        top: 15px;
+        opacity: 0;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeup {
+    0% {
+        opacity: 0;
+        transform: translate(0, 100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fadedown {
+    0% {
+        opacity: 0;
+        transform: translate(0, -100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fadeleft {
+    0% {
+        opacity: 0;
+        transform: translate(100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes faderight {
+    0% {
+        opacity: 0;
+        transform: translate(-100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes backspin {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes expand {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+    100% {
+        height: 90%;
+        opacity: 1;
+    }
+}
+

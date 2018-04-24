@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alice Zhang</title>
+  <link rel="shortcut icon" href="favicon.png">
+
+  <!-- bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- styles -->
+  <link rel="stylesheet" type="text/css" href="custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- javascript -->
+  <script src="page.js"></script>
+
+  <!-- wow -->
+  <script src="assets/wow/dist/wow.min.js"></script>
+  <script>
+  new WOW().init();
+  </script>
+
+  <!-- AOS scrolling -->
+  <link rel="stylesheet" href="bower_components/aos/dist/aos.css">
+
+  <script src="bower_components/aos/dist/aos.js"></script>
+
+
+
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Quicksand" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- NAVIGATION MENU -->
+  <div class="side">
+    <div class="menu">
+      <a href="#" id="linkhome" onclick="openHome()"><h3>Alice</h3></a>
+      <a href="#" id="linkabout" onclick="openAbout()">About Me</a>
+      <a href="#" id="linkportfolio" onclick="openPortfolio()">Projects</a>
+      <a href="resume_2018.pdf" target="_blank">Resume</a>
+    </div>
+  </div>
+  <!-- /NAV MENU -->
+
+  <!-- HOME -->
+  <section id="home">
+    <div class="container homerow">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="wow fadein" data-aos="flip-left">
+                  <img src="onib.jpg" style="width: 50%">
+                </div>
+                <div class="wow fadein" data-aos="flip-left">
+                  <img src="ballroom.jpg" class="homeimg" style="width: 50%">
+                </div>
+                <div class="wow fadein" data-aos="flip-left">
+                  <img src="kpdc.jpg" class="homeimg" style="width: 50%">
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!-- /HOME -->
+
+  <!-- ABOUT ME -->
+  <section id="about">
+    <div class="title"><h2>About Me</h2></div>
+    <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="46.png" class="me">
+      </div>
+      <div class="col-md-6">
+        <p>Hello! I am a senior studying Statistics with an additional major in Human-Computer Interactions at Carnegie Mellon University. 
+        <p>Outside of work, I am a dancer involved in many campus organizations like KPDC, Ballroom and ONiB.</p>
+        <p>Email: zhuoyaz@andrew.cmu.edu</p>
+        <p>LinkedIn: Alice Zhang</p>
+
+      </div>
+    </div>
+    </div>
+
+  </section>
+  <!-- /ABOUT ME -->
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div class="title"><h2>Projects</h2></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="img-responsive" onclick="Poster()">
+            <div class="portfolio">
+              <img src="Group6.jpg">
+              <div class="overlay">
+                <a href="#" class="text">Static Poster</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="img-responsive" onclick="DM()">
+            <div class="portfolio">
+              <img src="http://mrpassenger.com/wp-content/uploads/2017/09/flight-delays.jpg">
+              <div class="overlay">
+                <a href="#" class="text">Flight Delay</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- /PORTFOLIO -->
+
+  <section id="contact">
+
+  </section>
+
+
+<!-- PORTFOLIO -->
+  <section id="poster">
+    <div class="title">
+        <a href="#" onclick="openPortfolio()">< Return to Projects</a>
+        <h2>Statistics Graphics and Visualization</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10">
+                <p></p>
+                In Statistical Graphics and Visualization, I learned the pros and cons of using different graphical displays to visualize datasets and its characteristics. I gained experience working not only with uni-variate and bivariate data, but also with three- dimensional tools, group structure/clustering, and projections of higher dimensional data. In our Graphics Project, my team and I worked to report interesting findings through text analysis, statistical maps, timeseries and networks based on real data from the article “Where Police Have Killed Americans in 2015” and the Guardian reporting with census data from the American Community Survey. We explored the underlying pattern from the profiles of police killing victims, including the demographics of the victims, the methods of killing, the time and location police killings, etc with the GGPlot2 package in R. We concluded the profile of a typical victim of police killings to be armed white male in their mid 20s living in either California, Florida, or Texas, and that that while there was no specific time where there was an unusual increase or decrease in police killings, the number of police killings of non-white was disproportionately higher to their population presence in their state. Our poster was then presented at the CMU Statistics Department’s 50th Anniversary celebration. Also with R and GGPlot2, along with Plotly and other built in packages, my group and I created a web-based, data visualization tool. Each of our 8 graphs had interactive aspects which allowed users to select the variables and conditions, hover over areas for additional information, change the amount of data displayed, etc. The graphs were then published and displayed on a Shiny Dashboard using the Shiny App.
+                <p></p>
+                <p><img src="Group6.jpg" style="width: 90%"></p>
+                
+            </div>
+        </div>
+    </div>
+  </section>
+
+
+
+  
+
+  <section id="dm">
+    <div class="title">
+        <a href="#" onclick="openPortfolio()">< Return to Projects</a>
+        <h2>Data Mining</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10">
+                <p>></p>
+                In my Data Mining class, my project team examined the dataset containing information extracted from the Airline On-Time Performance Data made available through the Bureau of Transportation Statistics of the U.S.Department of Transportation. We were specifically interested in the commercial flight activity to and from Pittsburgh International Airport (PIT) in 2015. Since flight delays are often a costly inconvenience to passengers, our goal was to predict whether or not there would be departure flight delays. We tested our predictions on a portion of the 2016 dataset, and since we only cared about flights departing from Pittsburgh, our test data was the subset of data that were departing from Pittsburgh. In order to increase our predictive accuracy, we used the R package weatherData to gather additional weather data in both departing and arrival cities. After performing exploratory analysis, we modeling our data with random forest to and adaptive boosting but found that AdaBoost achieved a lower misclassification rate, higher completeness, and higher purity than random forest did. With our AdaBoost model, we were able to achieve a testing error of 8.4%.
+            </div>
+        </div>
+    </div>
+  </section>
+
+  
+
+</body>
+
+</html>
